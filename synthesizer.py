@@ -41,9 +41,7 @@ def play_midi(path):
                 frequency=220 * 2 ** ((message.note - 57) / 12),
                 volume=message.velocity / 127
             )
-        # Wait for everything to be finished:
-        while p.actions:
-            sd.sleep(100)
+        p.wait()
 
 
 if __name__ == '__main__':
