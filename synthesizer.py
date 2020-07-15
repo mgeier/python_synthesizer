@@ -42,6 +42,7 @@ def play_midi(path):
                 volume=message.velocity / 127
             )
         p.wait()
+    print(p.stats.output_underflows, 'output underflows')
 
 
 if __name__ == '__main__':
